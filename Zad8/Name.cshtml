@@ -1,0 +1,27 @@
+﻿@{ 
+    string name;
+
+    if (Request["name"] == null || Request["name"] == "")
+    {
+        name = "Robert Paulson";
+    }
+    else
+    {
+        name = Request["name"];
+    }
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Name</title>
+</head>
+<body>
+    <ul>
+        @for (int i = 0; i < 10; i++)
+        {
+            <li>His name is @name</li>
+        }
+    </ul>
+</body>
+</html>
